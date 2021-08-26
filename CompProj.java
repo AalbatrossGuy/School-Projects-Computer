@@ -5,7 +5,7 @@
 //Topic: Make a calculator in java with all the Mathematical libraries in java.
 
 import java.util.Scanner;
-
+import java.text.DecimalFormat;
 
 class CompProj{
     public static void main(String[] args){
@@ -167,6 +167,39 @@ class CompProj{
                 System.out.println("Answer = "+si);
                 break;
 
+            case 18:
+                // Compound Interest 
+                System.out.print("Enter Principal Value: ");
+                double princi = scan.nextDouble();
+                System.out.print("Enter Rate%: ");
+                double ratepercent = scan.nextDouble();
+                System.out.print("Enter Time: ");
+                double timetaken = scan.nextDouble();
+                double ci = princi*(Math.pow((1+ ratepercent / 100), timetaken));
+                System.out.println("Answer = "+ci);
+                break;
+
+            case 19:
+                // Fahrenheit to Celcius
+                String pattern = "#.##";
+                DecimalFormat decfor = new DecimalFormat(pattern);
+                System.out.print("Enter temperature in Fahrenheit: ");
+                float temp = scan.nextFloat();
+                double celcius = (5*(temp - 32))/9;
+                String fmtcelcius = decfor.format(celcius);
+                System.out.println("Answer = "+fmtcelcius+"°C");
+                break;
+
+            case 20:
+                // Celcius to Fahrenheit 
+                String pattern2 = "#.##";
+                DecimalFormat decfor2 = new DecimalFormat(pattern2);
+                System.out.print("Enter temperature in Celcius: ");
+                float temp2 = scan.nextFloat();
+                double fahrenheit = ((temp2 * 9)/5) + 32;
+                String fmtfahrenheit = decfor2.format(fahrenheit);
+                System.out.println("Answer = "+fmtfahrenheit+"°F");
+                break;
 
             default:
                 System.out.println("Choice no Exist :)");
