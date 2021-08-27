@@ -9,49 +9,51 @@ import java.text.DecimalFormat;
 
 class CompProj{
     public static void main(String[] args){
+        double a=0, b=0, c=0, d=0;
         Scanner scan = new Scanner(System.in);
         System.out.print("1. Addition\n2. Substraction\n3. Multiplication\n4. Division\n5. Finding a power value\n6. Square of a number\n7. Cube of a number\n8. Square root\n9. Absolute Value\n10. Floor Value\n");
         System.out.print("11. Ceil Value\n12. Max of 2 numbers\n13. Min of 2 numbers\n14. Max of 3 numbers\n15. Min of 3 numbers\n16. Second largest/smallest among 3 numbers\n17. Simple Interest\n18. Compound Interest\n19. Fahrenheit to Celcius\n");
         System.out.println("20. Celcius to Fahrenheit");
         System.out.println("\n");
         System.out.println("Enter your choice: ");
-        //System.out.println();
+
         int OPTION = scan.nextInt();
+        if(OPTION >=6 && OPTION <=11) {
+            System.out.print("Enter a number: ");
+            a = scan.nextDouble();
+        }
+        
+        if (OPTION >=1 && OPTION <= 4){
+            System.out.print("Enter 2 numbers: ");
+            b = scan.nextDouble();
+            c = scan.nextDouble();
+        }
+        
+        // System.out.println()
+
         switch (OPTION) {
             case 1:
                 // Addition
-                System.out.print("Enter 2 numbers: ");
-                int a_add = scan.nextInt();
-                int b_add = scan.nextInt();
-                int c_add = a_add +b_add;
-                System.out.println("Answer = "+c_add);
+                d = b+c;
+                System.out.println("Answer = "+d);
                 break;
 
             case 2:
                 // Substraction
-                System.out.print("Enter 2 numbers: ");
-                int a_sub =  scan.nextInt();
-                int b_sub =  scan.nextInt();
-                int c_sub = a_sub - b_sub;
-                System.out.println("Answer = "+c_sub);
+                d = b-c;
+                System.out.println("Answer = "+d);
                 break;
 
             case 3:
                 // Multiplication
-                System.out.print("Enter 2 numbers: ");
-                int a_multi = scan.nextInt();
-                int b_multi = scan.nextInt();
-                int c_multi = a_multi * b_multi;
-                System.out.println("Answer = "+c_multi);
+                d = b*c;
+                System.out.println("Answer = "+d);
                 break;
 
             case 4:
                 // Division
-                System.out.print("Enter 2 numbers: ");
-                int a_div = scan.nextInt();
-                int b_div = scan.nextInt();
-                int c_div = a_div / b_div;
-                System.out.println("Answer = "+c_div);
+                d = b/c;
+                System.out.println("Answer = "+d);
                 break;
             
             case 5:
@@ -66,49 +68,37 @@ class CompProj{
 
             case 6:
                 // Square of a number 
-                System.out.print("Enter a number: ");
-                int num = scan.nextInt();
-                double res = Math.pow(num, 2);
+                double res = Math.pow(a, 2);
                 System.out.println("Answer = "+res);
                 break;
             
             case 7:
                 // Cube of a number
-                System.out.print("Enter a number: ");
-                int cnum = scan.nextInt();
-                double cres = Math.pow(cnum, 3);
+                double cres = Math.pow(a, 3);
                 System.out.println("Answer = "+cres);
                 break;
             
             case 8:
                 // Square Root
-                System.out.print("Enter a number: ");
-                int snum = scan.nextInt();
-                double sres = Math.sqrt(snum);
+                double sres = Math.sqrt(a);
                 System.out.println("Answer = "+sres);
                 break;
             
             case 9:
                 // Absolute Value
-                System.out.print("Enter A Number: ");
-                double abnum = scan.nextDouble();
-                double abres = Math.abs(abnum);
+                double abres = Math.abs(a);
                 System.out.println("Answer = "+abres);
                 break;
 
             case 10:
-                // Floor Value 
-                System.out.print("Enter a Number: ");
-                double fnum = scan.nextDouble();
-                double fres = Math.floor(fnum);
+                // Floor Value
+                double fres = Math.floor(a);
                 System.out.println("Answer = "+fres);
                 break;
 
             case 11: 
-                // Ceil Value 
-                System.out.print("Enter a number: ");
-                double cvnum = scan.nextDouble();
-                double cvres = Math.ceil(cvnum);
+                // Ceil Value
+                double cvres = Math.ceil(a);
                 System.out.println("Answer = "+cvres);
                 break; 
 
