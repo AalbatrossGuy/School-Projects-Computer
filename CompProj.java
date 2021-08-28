@@ -11,7 +11,7 @@ class CompProj{
     public static void main(String[] args){
         double a=0, b=0, c=0, d=0;
         Scanner scan = new Scanner(System.in);
-        System.out.print("1. Addition\n2. Substraction\n3. Multiplication\n4. Division\n5. Finding a power value\n6. Square of a number\n7. Cube of a number\n8. Square root\n9. Absolute Value\n10. Floor Value\n");
+        System.out.print("\n1. Addition\n2. Substraction\n3. Multiplication\n4. Division\n5. Finding a power value\n6. Square of a number\n7. Cube of a number\n8. Square root\n9. Absolute Value\n10. Floor Value\n");
         System.out.print("11. Ceil Value\n12. Max of 2 numbers\n13. Min of 2 numbers\n14. Max of 3 numbers\n15. Min of 3 numbers\n16. Second largest/smallest among 3 numbers\n17. Simple Interest\n18. Compound Interest\n19. Fahrenheit to Celcius\n");
         System.out.println("20. Celcius to Fahrenheit");
         System.out.println("\n");
@@ -60,7 +60,7 @@ class CompProj{
                 // Finding a power of a value
                 System.out.print("Enter base: ");
                 int base = scan.nextInt();
-                System.out.println("Enter power: ");
+                System.out.print("Enter power: ");
                 int power = scan.nextInt();
                 double out = Math.pow(base, power);
                 System.out.println("Answer = "+out);
