@@ -28,7 +28,7 @@ class CompProj{
             b = scan.nextDouble();
             c = scan.nextDouble();
         }
-        
+
         // System.out.println()
 
         switch (OPTION) {
@@ -141,8 +141,27 @@ class CompProj{
                 break;
 
             case 16:
-                // Second largest/smallest num 
-                System.out.println(" ");
+                // Second Largest/Smallest Num 
+                int n = 3, temparr;
+                int arr[] = new int[n];
+                System.out.print("Enter 3 numbers: ");
+                
+                for (int i = 0; i<n; i++){
+                    arr[i] = scan.nextInt();
+                }
+                
+                for (int i = 0; i<n; i++){
+                    for (int j = i+1; j<n; j++){
+                        if (arr[i] > arr[j]){
+                            temparr = arr[i];
+                            arr[i] = arr[j];
+                            arr[j] = temparr;
+                        }
+                    }
+                }
+                
+                System.out.println("Second Largest Number = "+arr[n-2]);
+                //System.out.println("Smallest Number: "+arr[0]);
                 break;
 
             case 17:
