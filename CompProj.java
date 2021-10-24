@@ -211,7 +211,7 @@ class CompProj{
                 break;
 
             default:
-                System.out.println("Choice no Exist :)");
+                System.out.println("Choice doesn't Exists!");
                 break;
         }
     }
